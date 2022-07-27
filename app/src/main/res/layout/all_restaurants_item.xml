@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="7dp"
+    android:layout_marginBottom="7dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/restaurantImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="center"
+            android:src="@drawable/restaurant_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:riv_corner_radius="10dp"/>
+
+        <TextView
+            android:id="@+id/restaurantDeliveryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded"
+            android:layout_margin="8dp"
+            android:text="30 min"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurantImage"
+            app:layout_constraintStart_toStartOf="@+id/restaurantImage" />
+
+        <TextView
+            android:id="@+id/restaurantDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded"
+            android:backgroundTint="#D2E91E1E"
+            android:text="15% OFF"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/restaurantImage"
+            app:layout_constraintStart_toStartOf="@+id/restaurantImage" />
+
+
+        <TextView
+            android:id="@+id/restaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Restaurant Name"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantImage"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/restaurantOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(0)"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurantName"
+            app:layout_constraintEnd_toEndOf="@+id/restaurantImage"
+            app:layout_constraintTop_toTopOf="@+id/restaurantName" />
+
+        <TextView
+            android:id="@+id/restaurantRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurantName"
+            app:layout_constraintEnd_toStartOf="@+id/restaurantOrders"
+            app:layout_constraintTop_toTopOf="@+id/restaurantName" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/star"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurantName"
+            app:layout_constraintEnd_toStartOf="@+id/restaurantRating"
+            app:layout_constraintTop_toTopOf="@+id/restaurantName" />
+
+        <TextView
+            android:id="@+id/restaurantFoodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fast Food"
+            android:textSize="14sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantName"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/deliveryCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Charge - Tk 30"
+            android:textSize="13sp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantFoodType"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
